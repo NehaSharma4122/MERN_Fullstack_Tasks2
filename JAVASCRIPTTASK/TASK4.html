@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Show Date and Time</title>
+</head>
+<body>
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Show Today's Date</title>
+</head>
+<body>
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Show Today's Date and Time</title>
+</head>
+<body>
+    <button onclick="showDate()">Show Date</button>
+    <p id="dateDisplay"></p>
+    <br/>
+    <button onclick="showDateTime()">Show Date and Time</button>
+    <p id="dateTimeDisplay"></p>
+
+    <script>
+        function showDate() {
+            let today = new Date();
+            let day = today.getDate();
+            let month = today.toLocaleString('default', { month: 'long' });
+            let year = today.getFullYear();
+            let formattedDate = `${day}/${month}/${year}`;
+            document.getElementById('dateDisplay').innerText = formattedDate;
+        }
+
+        function showDateTime() {
+            let now = new Date();
+            document.getElementById('dateTimeDisplay').innerText = now;
+        }
+    </script>
+</body>
+</html>
+
+</body>
+</html>
+
+</body>
+</html>
