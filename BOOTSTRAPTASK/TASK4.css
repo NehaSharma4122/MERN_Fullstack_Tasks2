@@ -1,0 +1,27 @@
+img {
+  width: 200px;
+  height: 200px;
+}
+.card:hover,
+img:focus {
+  transform: scale(1.05);
+  transition: 5s ease;
+}
+.card-img-overlay {
+  width: 200px;
+  height: 200px;
+  opacity: 0.9;
+  background-color: deepskyblue;
+}
+.card-img-overlay:hover {
+  opacity: 0;
+  transition: 2s ease;
+}
+a {
+  text-decoration: none;
+  color: orange;
+  font-size: 20px;
+}
+a:hover {
+  color: brown;
+}

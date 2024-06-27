@@ -1,0 +1,22 @@
+.obj {
+  text-decoration: none;
+  color: aliceblue;
+}
+.obj:hover {
+  text-decoration: none;
+  color: yellow;
+}
+.img1 {
+  position: relative;
+  width: 110%;
+  height: 500px;
+  margin-left: 0px;
+  left: -10px;
+  filter: brightness(50%);
+}
+.card-container {
+  background-color: black;
+  position: relative;
+  left: -10;
+  right: 10;
+}

@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+
+<body>
+    <div class="container g-2 mt-4">
+        <form action="" class="was-validated">
+            <div class="col-md-10 d-flex d-flex flex-row justify-content-evenly">
+                <label for="validationServerFirstName" class="form-label col-md-2">First Name</label>
+                <div class="input-group has-validation col-md-6 mb-3">
+                    <span class="input-group-text" id="basic-add1"><img src="user.png"
+                            style="width: 20px;height: 20px;"></span>
+                    <input type="text" class="form-control" id="validationServerFirstName" placeholder="First Name"
+                        aria-label="First Name" aria-describedby="basic-add1 validationServerFirstNameFeedback"
+                        required>
+                    <div class="valid-feedback">Looks good</div>
+                    <div id="validationServerFirstNameFeedback" class="invalid-feedback">
+                        Please supply your first name.
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-10 d-flex d-flex flex-row justify-content-evenly">
+                <label for="validationServerLastName" class="form-label col-md-2">Last Name</label>
+                <div class="input-group has-validation col-md-6 mb-3">
+                    <span class="input-group-text" id="basic-add2"><img src="user.png"
+                            style="width: 20px;height: 20px;"></span>
+                    <input type="text" class="form-control" id="validationServerLastName" placeholder="Last Name"
+                        aria-label="Last Name" aria-describedby="basic-add2 validationServerLastNameFeedback" required>
+                    <div class="valid-feedback">Looks good</div>
+
+                    <div class="invalid-feedback">
+                        Please supply your last name.
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-10 d-flex d-flex flex-row justify-content-evenly">
+                <label for="validationServerEmail" class="form-label col-md-2">Email</label>
+                <div class="input-group has-validation col-md-6 mb-3">
+                    <span class="input-group-text" id="basic-add3"><img src="mail.png"
+                            style="width: 20px;height: 20px;"></span>
+                    <input type="email" class="form-control" id="validationServerEmail" placeholder="Email"
+                        aria-label="Email" aria-describedby="basic-add3 validationServerEmailFeedback" required>
+                    <div class="valid-feedback">Looks good</div>
+                    <div id="validationServerEmailFeedback" class="invalid-feedback">
+                        Please supply your email address.
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-10 d-flex d-flex flex-row justify-content-evenly">
+                <label for="validationServerPhone" class="form-label col-md-2">Phone #</label>
+                <div class="input-group has-validation col-md-6 mb-3">
+                    <span class="input-group-text" id="basic-add4"><img src="telephone.png"
+                            style="width: 20px;height: 20px;"></span>
+                    <input type="number" class="form-control" id="validationServerPhone" placeholder="Phone Number"
+                        aria-label="Phone Number" aria-describedby="basic-add4 validationServerPhoneFeedback" required>
+                    <div class="valid-feedback">Looks good</div>
+                    <div id="validationServerPhoneFeedback" class="invalid-feedback">
+                        Please supply your phone number.
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-10 d-flex d-flex flex-row justify-content-evenly">
+                <label for="validationServerAddress" class="form-label col-md-2">Address</label>
+                <div class="input-group has-validation col-md-6 mb-3">
+                    <span class="input-group-text" id="basic-add5"><img src="house.png"
+                            style="width: 20px;height: 20px;"></span>
+                    <input type="text" class="form-control" id="validationServerAddress" placeholder="Address"
+                        aria-label="Address" aria-describedby="basic-add5 validationServerAddressFeedback" required>
+                    <div class="valid-feedback">Looks good</div>
+                    <div id="validationServerAddressFeedback" class="invalid-feedback">
+                        Please supply your address.
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-10 d-flex d-flex flex-row justify-content-evenly">
+                <label for="validationServerCity" class="form-label col-md-2">City</label>
+                <div class="input-group has-validation col-md-6 mb-3">
+                    <span class="input-group-text" id="basic-add6"><img src="maps-and-flags.png"
+                            style="width: 20px;height: 20px;"></span>
+                    <input type="text" class="form-control" id="validationServerCity" placeholder="City"
+                        aria-label="City" aria-describedby="basic-add6 validationServerCityFeedback" required>
+                    <div class="valid-feedback">Looks good</div>
+                    <div id="validationServerCityFeedback" class="invalid-feedback">
+                        Please supply your city.
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-10 d-flex d-flex flex-row justify-content-evenly">
+                <label for="validationServerState" class="form-label col-md-2">State</label>
+                <div class="input-group has-validation col-md-6 mb-3">
+                    <span class="input-group-text" id="basic-add7"><img src="list.png"
+                            style="width: 20px;height: 20px;"></span>
+                    <select class="form-select" required aria-label="select example">
+                        <option value="">Select your State</option>
+                        <option value="1">Delhi</option>
+                        <option value="2">Punjab</option>
+                        <option value="3">Haryana</option>
+                        <option value="4">Himachal Pradesh</option>
+                    </select>
+                    <div class="valid-feedback">Looks good</div>
+                    <div id="validationServerStateFeedback" class="invalid-feedback">
+                        Please supply your first name.
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-10 d-flex d-flex flex-row justify-content-evenly">
+                <label for="validationServerCheck" class="form-label col-md-2">Do you have hosting?</label>
+                <div class="input-group has-validation d-flex flex-column col-md-6 mb-3">
+                    <div class="form-check">
+                        <input type="radio" class="form-check-input" id="validationFormCheck1" name="radio-stacked"
+                            required>
+                        <label class="form-check-label" for="validationFormCheck1">Yes</label>
+                    </div>
+                    <div class="form-check">
+                        <input type="radio" class="form-check-input" id="validationFormCheck2" name="radio-stacked"
+                            required>
+                        <label class="form-check-label" for="validationFormCheck2">No</label>
+
+                        <div class="valid-feedback">Looks good</div>
+                        <div id="validationServerFirstNameFeedback" class="invalid-feedback">
+                            Please select a favourable choice.
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-10 d-flex d-flex flex-row justify-content-evenly">
+                <label for="validationServerProject" class="form-label col-md-2">Project Description</label>
+                <div class="input-group has-validation col-md-6 mb-3">
+                    <span class="input-group-text" id="basic-add8"><img src="pencil.png"
+                            style="width: 20px;height: 20px;"></span>
+                    <textarea class="form-control" id="validationServerProjectFeedback"
+                        placeholder="Project Description" required></textarea>
+                    <div class="valid-feedback">Looks good</div>
+                    <div id="validationServerProjectFeedback" class="invalid-feedback">
+                        Please supply your project's description.
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <button class="btn btn-warning ms-5 px-5 py-1 text-light fs-3" type="submit">Send<img
+                        src="paper-aeroplane.png" style="width: 20px;height: 20px;"></button>
+            </div>
+        </form>
+    </div>
+
+</body>
+
+</html>
