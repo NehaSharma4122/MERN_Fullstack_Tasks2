@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        form {
+            margin: 40px 10px;
+            padding: 20px;
+        }
+
+        .error {
+            color: red;
+        }
+
+        .error-input {
+            border: 1px solid red;
+        }
+
+        .input-label {
+            display: block;
+            font-weight: bold;
+        }
+
+        tr,
+        td {
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <script>
+        function validateName() {
+            var name = document.f1.name.value;
+
+            if (name.length < 1) {
+                return false;
+            } else {
+                return true;
+            }
+        }
+        function validateemail() {
+            var x = document.f1.email.value;
+            var atposition = x.indexOf("@");
+            var dotposition = x.lastIndexOf(".");
+            if (atposition < 1 || dotposition < atposition + 2 || dotposition + 2 >= x.length) {
+                return false;
+            }
+        }
+        function validateForm() {
+            const nameInput = document.getElementById("name");
+            const emailInput = document.getElementById("email");
+            const websiteInput = document.getElementById("website");
+            const messageInput = document.getElementById("message");
+            const nameError = document.getElementById("nameError");
+            const emailError = document.getElementById("emailError");
+            const websiteError = document.getElementById("websiteError");
+            const messageError = document.getElementById("messageError");
+            nameError.textContent = "";
+            emailError.textContent = "";
+            websiteError.textContent = "";
+            messageError.textContent = "";
+            let hasError = false;
+            if (!nameInput.checkValidity()) {
+                nameError.textContent = "This field is required";
+                nameInput.classList.add("error-input");
+                hasError = true;
+            }
+            else {
+                nameInput.classList.remove("error-input");
+            }
+            if (!emailInput.checkValidity()) {
+                emailError.textContent = "A valid email is required.";
+                emailInput.classList.add("error-input");
+                hasError = true;
+            } else {
+                emailInput.classList.remove("error-input");
+            }
+
+            if (!websiteInput.checkValidity()) {
+                websiteError.textContent = "A valid url is required.";
+                websiteInput.classList.add("error-input");
+                hasError = true;
+            } else {
+                websiteInput.classList.remove("error-input");
+            }
+
+            if (!messageInput.checkValidity()) {
+                messageError.textContent = "This field is required.";
+                messageInput.classList.add("error-input");
+                hasError = true;
+            } else {
+                messageInput.classList.remove("error-input");
+            }
+
+            if (hasError) {
+                return;
+            }
+
+        }  
+    </script>
+
+    <form name="f1" action="#">
+        <table cellpadding="10px">
+            <tr>
+                <td><label for="name" class="input-label">Name:</label></td>
+                <td><input type="text" name="name" id="name" required class="error-input" />
+                </td>
+                <td><span id="nameError" class="error">This field is required</span></td>
+            </tr>
+            <tr>
+                <td><label for="email" class="input-label">Email:</label></td>
+                <td><input type="email" name="email" id="email" class="error-input" required />
+                </td>
+                <td><span id="emailError" class="error">A valid email is required.</span></td>
+            </tr>
+            <tr>
+                <td><label for="website" class="input-label">Website:</label></td>
+                <td><input type="text" id="website" required class="error-input"></td>
+                <td><span id="websiteError" class="error">A valid URL is required.</span></td>
+            </tr>
+            <tr>
+                <td><label for="message" class="input-label">Message:</label></td>
+                <td><textarea id="message" rows="5" required class="error-input"></textarea></td>
+                <td><span id="messageError" class="error">This field is required.</span></td>
+            </tr>
+        </table>
+        <button type="submit" onclick="validateForm()">Submit</button>
+    </form>
+</body>
+
+</html>
