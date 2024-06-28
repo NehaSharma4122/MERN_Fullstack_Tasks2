@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            height: 700px;
+            background: rgb(2, 0, 36);
+            background: linear-gradient(45deg, rgba(2, 0, 36, 1) 0%, rgba(244, 184, 232, 1) 0%, rgba(246, 198, 242, 1) 7%, rgba(248, 185, 249, 1) 12%, rgba(210, 185, 241, 1) 34%, rgba(207, 196, 250, 1) 54%, rgba(201, 220, 249, 1) 82%, rgba(190, 241, 251, 1) 100%);
+        }
+
+        .error-text {
+            color: red;
+            font-size: 12px;
+            margin-top: 5px;
+            display: none;
+        }
+    </style>
+</head>
+
+<body align="center">
+    <table cellspacing="0" width="55%" align="center">
+        <caption>
+            <font size="7" color="black"><b>Registration Form</b></font><br /><br />
+        </caption>
+        <tr width="100%" align="center">
+            <td width="55%">
+                <label>&ensp;&ensp;<b>First Name</b>&ensp;&ensp;</label>
+            </td>
+            <td>
+                <input type="text" placeholder="First Name" id="firstName" size="70" height="10" required />
+            </td>
+            <td>
+                <span class="error-text" id="firstNameError">POOR</span>
+            </td>
+        </tr>
+        <tr width="100%" align="center">
+            <td width="55%">
+                <label>&ensp;&ensp;<b>Last Name</b>&ensp;&ensp;</label>
+            </td>
+            <td>
+                <input type="text" placeholder="Last Name" id="lastName" size="70" height="10" required />
+            </td>
+            <td>
+                <span class="error-text" id="lastNameError">POOR</span>
+            </td>
+        </tr>
+        <tr width="100%" align="center">
+            <td width="55%">
+                <label>&ensp;&ensp;<b>Email</b>&ensp;&ensp;</label>
+            </td>
+            <td>
+                <input type="email" placeholder="Email" id="email" size="70" height="10" required />
+            </td>
+            <td>
+                <span class="error-text" id="emailError">POOR</span>
+            </td>
+        </tr>
+        <tr width="100%" align="center">
+            <td width="55%">
+                <label>&ensp;&ensp;<b>Password</b>&ensp;&ensp;</label>
+            </td>
+            <td>
+                <input type="password" placeholder="Password" id="password" size="70" height="10" required />
+            </td>
+            <td>
+                <span class="error-text" id="passwordError">POOR</span>
+            </td>
+        </tr>
+        <tr width="100%" align="center">
+            <td width="55%">
+                <label>&ensp;&ensp;<b>Re-enter Password</b>&ensp;&ensp;</label>
+            </td>
+            <td>
+                <input type="password" placeholder="Re-enter Password" id="confirmPassword" size="70" height="10">
+            </td>
+            <td>
+                <span class="error-text" id="confirmPasswordError">POOR or Mismatch</span>
+            </td>
+        </tr>
+        <tr width="100%" align="center">
+            <td width="55%">
+                <label>&ensp;&ensp;<b>Gender</b>&ensp;&ensp;</label>
+            </td>
+            <td>
+                <table width="100%">
+                    <tr>
+                        <td align="left">
+                            <input type="radio" name="Gender" id="male" value="Male">
+                            <label>Male</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align="left">
+                            <input type="radio" name="Gender" id="female" value="Female">
+                            <label>Female</label>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        <tr width="100%" align="center">
+            <td width="55%">
+                <label>&ensp;&ensp;<b>Age</b>&ensp;&ensp;</label>
+            </td>
+            <td>
+                <input type="number" id="age" placeholder="Number" min="0" style="width: 492px;">
+            </td>
+            <td>
+                <span class="error-text" id="ageError">POOR</span>
+            </td>
+        </tr>
+        <tr width="100%" align="center">
+            <td width="55%">
+                <label>&ensp;&ensp;<b>Phone number</b>&ensp;&ensp;</label>
+            </td>
+            <td>
+                <input type="tel" id="phoneNumber" placeholder="Phone Number" size="70" height="10" minlength="10"
+                    maxlength="10">
+            </td>
+            <td>
+                <span class="error-text" id="phoneNumberError">POOR</span>
+            </td>
+        </tr>
+        <tr width="100%" align="center">
+            <td width="55%" align="center">
+                <label>&ensp;&ensp;<b>Address</b>&ensp;&ensp;</label>
+            </td>
+            <td>
+                <textarea name="Address" rows="5" cols="66">
+                    </textarea>
+            </td>
+        </tr>
+        <tr width="100%" align="center">
+            <td width="55%">
+                <label>&ensp;&ensp;<b>State</b>&ensp;&ensp;</label>
+            </td>
+            <td>
+                <input type="text" id="state" placeholder="State" size="70" height="10">
+            </td>
+            <td>
+                <span class="error-text" id="stateError">POOR</span>
+            </td>
+        </tr>
+        <tr width="100%" align="center">
+            <td width="55%">
+                <label>&ensp;&ensp;<b>Country</b>&ensp;&ensp;</label>
+            </td>
+            <td align="left">
+                <select>
+                    <option value="">&ensp;Choose your Country&ensp;&ensp;&ensp;</option>
+                    <option value="India">India</option>
+                    <option value="USA">USA</option>
+                    <option value="Mexico">Mexico</option>
+                    <option value="Germany">Germany</option>
+                </select>
+            </td>
+        </tr>
+        <tr width="100%" align="center">
+            <td width="55%">
+                <label>&ensp;&ensp;<b>Languages known</b>&ensp;&ensp;</label>
+            </td>
+            <td>
+                <input type="checkbox" name="Language" value="English">
+                <label>
+                    English&ensp;&ensp;&ensp;&ensp;
+                </label>
+                <input type="checkbox" name="Language" value="Kannada">
+                <label>
+                    Kannada&ensp;&ensp;&ensp;&ensp;
+                </label>
+                <input type="checkbox" name="Language" value="Hindi">
+                <label>
+                    Hindi&ensp;&ensp;&ensp;&ensp;
+                </label>
+                <input type="checkbox" name="Language" value="Telugu">
+                <label>
+                    Telugu&ensp;&ensp;&ensp;&ensp;
+                </label>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <input type="checkbox">
+                <label>&ensp;&ensp;Hereby I declare all the given details are true.</label>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2" align="right" cellpadding="10">
+                <label>&ensp;&ensp;Log in to&ensp;<a href="https://ethnus.com/" target="blank/">Ethnus
+                    </a>&ensp;website&ensp;</label>
+            </td>
+        </tr>
+    </table>
+    <br />
+    <br />
+    <button type="submit" align="center" onclick="validateForm()">Register</button>
+    <script>
+        function validateForm() {
+            const firstName = document.getElementById("firstName").value.trim();
+            const lastName = document.getElementById("lastName").value.trim();
+            const email = document.getElementById("email").value.trim();
+            const password = document.getElementById("password").value.trim();
+            const confirmPassword = document.getElementById("confirmPassword").value.trim();
+            const age = document.getElementById("age").value.trim();
+            const phoneNumber = document.getElementById("phoneNumber").value.trim();
+            const state = document.getElementById("state").value.trim();
+
+            document.getElementById("firstNameError").style.display = "none";
+            document.getElementById("lastNameError").style.display = "none";
+            document.getElementById("emailError").style.display = "none";
+            document.getElementById("passwordError").style.display = "none";
+            document.getElementById("confirmPasswordError").style.display = "none";
+            document.getElementById("ageError").style.display = "none";
+            document.getElementById("phoneNumberError").style.display = "none";
+            document.getElementById("stateError").style.display = "none";
+
+            let isValid = true;
+
+            if (firstName === "") {
+                document.getElementById("firstNameError").style.display = "block";
+                isValid = false;
+            }
+            if (lastName === "") {
+                document.getElementById("lastNameError").style.display = "block";
+                isValid = false;
+            }
+            if (email === "" || !email.includes("@")) {
+                document.getElementById("emailError").style.display = "block";
+                isValid = false;
+            }
+            if (password === "") {
+                document.getElementById("passwordError").style.display = "block";
+                isValid = false;
+            }
+            if (confirmPassword === "" || confirmPassword !== password) {
+                document.getElementById("confirmPasswordError").style.display = "block";
+                isValid = false;
+            }
+            if (age === "" || isNaN(age)) {
+                document.getElementById("ageError").style.display = "block";
+                isValid = false;
+            }
+            if (phoneNumber === "" || isNaN(phoneNumber)) {
+                document.getElementById("phoneNumberError").style.display = "block";
+                isValid = false;
+            }
+            if (state === "") {
+                document.getElementById("stateError").style.display = "block";
+                isValid = false;
+            }
+
+            return isValid;
+        }
+    </script>
+
+</body>
+
+</html>
